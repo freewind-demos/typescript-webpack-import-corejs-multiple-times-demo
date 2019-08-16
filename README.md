@@ -18,7 +18,15 @@ Uncaught Error: only one instance of babel-polyfill is allowed
 解决办法是：
 
 - 旧版`babel-polyfill`: 使用`idempotent-babel-polyfill`这个库
-- 新版`@babel/polyfill`: 使用`@babel/polyfill/noConflict`
+- 新版`@babel/polyfill`: <s>使用`@babel/polyfill/noConflict`</s>
+
+注意：
+
+> 🚨 As of Babel 7.4.0, this package has been deprecated in favor of
+> directly including core-js/stable (to polyfill ECMAScript features)
+> and regenerator-runtime/runtime (needed to use transpiled generator functions):
+> > import "core-js/stable";
+> > import "regenerator-runtime/runtime";
 
 ```
 npm install
