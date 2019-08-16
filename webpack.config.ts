@@ -5,8 +5,8 @@ import path from 'path';
 const config: Configuration = {
   mode: 'development',
   entry: {
-    entry1: ['@babel/polyfill/noConflict', './entry1.ts'],
-    entry2: ['@babel/polyfill/noConflict', './entry2.ts'],
+    entry1: ['core-js/stable', 'regenerator-runtime/runtime', './entry1.ts'],
+    entry2: ['core-js/stable', 'regenerator-runtime/runtime', './entry2.ts'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
